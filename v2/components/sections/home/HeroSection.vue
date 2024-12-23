@@ -52,7 +52,7 @@
                         </div>
                         <div
                             class="absolute w-3/5 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border">
-                            <img src="/images/hero2.2.pNG" alt="HERO IMAGE" width="500" height="auto" loading="lazy"
+                            <img src="/images/hero2.2.png" alt="HERO IMAGE" width="500" height="auto" loading="lazy"
                                 class="w-full h-full rounded-2xl object-fill items-center">
                         </div>
                         <div
