@@ -20,7 +20,7 @@
                         <AtomsTitle texte="Чистотата на природата във вашия дом."  class="indent-8" />
                         <AtomsTitle texte="Подбираме най – добрите био препарати" class="indent-8 text-green-500" />
                         <p class="text-gray-600 dark:text-gray-300 pt-8 list-disc indent-8">Работим изцяло съобразено с вас и вашето време </p>
-                        <p class="text-gray-600 dark:text-gray-300 pt-8 list-disc indent-8">
+                        <h2 class="text-gray-600 dark:text-gray-300 pt-8 list-disc indent-8">
                             За още по-пълно обслужване. Можем да заредим банята с тоалетни принадлежности, закупени от нас при предварително заявяване.
 
 
@@ -32,7 +32,7 @@
 
                             
 
-                        </p>
+                        </h2>
                        
                         
                     </div>

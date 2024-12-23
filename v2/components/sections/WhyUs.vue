@@ -11,7 +11,7 @@
                     </div>
                     <div class="relative">
                         <AtomsTitle texte="Покритие" class=""/>
-                        <h1 class="text-gray-600 dark:text-gray-300 pt-8 text-2xl font-black">
+                        <h1 class="text-gray-600 dark:text-gray-300 pt-8 text-4xl font-black">
                            Пампорово - Чепеларе - Смолян 
                         </h1>
                         
