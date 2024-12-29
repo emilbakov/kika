@@ -23,6 +23,10 @@ const navLinks = [
         href: "/#covarage"
     },
     {
+        text: "Pricing",
+        href: "/#pricing"
+    },
+    {
         text: "Contact",
         href: "/#contact"
     }

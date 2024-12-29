@@ -13,10 +13,8 @@
                     </p>
                 </div>
 
-                <BlocksFooterNavBlock title="Enterprise" :links="quickLinks" />
-                <BlocksFooterNavBlock title="Ressources" :links="ressourcesLinks" />
-                <BlocksFooterNavBlock title="Support" :links="supportLinks" />
-                <BlocksFooterNavBlock title="Enterprise" :links="quickLinks" />
+                <BlocksFooterNavBlock title="MENU" :links="quickLinks"  class="lg:col-span-2 ml-auto"/>
+                
             </div>
         </AtomsContainer>
         <div class="py-2 bg-gray-200 dark:bg-[rgb(10,16,29)]">
@@ -55,20 +53,24 @@
 <script lang="ts" setup>
 const quickLinks = [
     {
-        href: "#",
+        href: "#about",
         text: "About us"
     },
     {
-        href: "#",
-        text: "News"
+        href: "#whyus",
+        text: "WHY US"
     },
     {
-        href: "#",
-        text: "Team"
+        href: "#covarage",
+        text: "COVARAGE"
     },
     {
-        href: "#",
-        text: "Solution"
+        href: "#pricing",
+        text: "PRICING"
+    },
+    {
+        href: "#contact",
+        text: "CONTACT"
     }
 ]
 const ressourcesLinks = [
