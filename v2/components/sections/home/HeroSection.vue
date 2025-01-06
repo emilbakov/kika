@@ -18,7 +18,7 @@
                 class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
-                        <span class=" m-5 text-2xl px-2 py-1 rounded-md bg-gray-100 dark:bg-body text-primary ">Where Clean Meets the Peak</span>
+                        <span class=" m-5 text-4xl font-black px-2 py-1 rounded-md bg-gray-100 dark:bg-body text-primary ">Where Clean Meets the Peak</span>
                         <h1 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl indent-8">
                              <br> Професионално <span
                                 class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#d66a73]">почистване 
