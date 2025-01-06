@@ -91,18 +91,18 @@
                         <h1
                             class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
                             
-                            <span class="text-lg ml-1 font-normal text-gray-500">Почистване на къщи и вили</span>
+                            <span class="text-lg ml-1 font-normal text-gray-500 dark:text-gray-300">Почистване на къщи и вили</span>
                         </h1>
-                        <p class="flex items-center text-gray-600 mb-2">
+                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
                             <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
                             </span>Едноетажни и двуетажни до 120кв/м – от 400. 00 лв.
                         </p>
-                        <p class="flex items-center text-gray-600 mb-2">
+                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
                             <span
                                 class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -112,7 +112,7 @@
                             </span>Едноетажни и двуетажни до 210кв/ – от 550. 00 лв.
 
                         </p>
-                        <p class="flex items-center text-gray-600 mb-2">
+                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
                             <span
                                 class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -135,7 +135,7 @@
                         </h1>
                         <p class="flex items-center text-gray-600 mb-2">
                             <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
