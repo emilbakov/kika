@@ -11,23 +11,23 @@ function toggleNav(event: MouseEvent): void {
 
 const navLinks = [
     {
-        text: "About",
+        text: "За Нас",
         href: "/#about"
     },
     {
-        text: "Why us",
+        text: "Защо Нас",
         href: "/#whyus"
     },
     {
-        text: "Covarage",
+        text: "Обхват",
         href: "/#covarage"
     },
     {
-        text: "Pricing",
+        text: "Цени",
         href: "/#pricing"
     },
     {
-        text: "Contact",
+        text: "Контакт",
         href: "/#contact"
     }
 ]
