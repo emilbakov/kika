@@ -35,7 +35,7 @@
                             </svg>
                         </NuxtLink>
 
-                        <NuxtLink target="_blank" to="https://github.com/johnkat-mj" class="transition hover:!text-primary">
+                        <NuxtLink target="_blank" to="#" class="transition hover:!text-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="w-5 h-5" viewBox="0 0 16 16">
                                 <path
