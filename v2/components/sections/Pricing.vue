@@ -18,7 +18,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Почистване на студио – 60. 00 лв.
+                            </span>Почистване на студио – 30 €.
                         </p>
                         <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
                             <span
@@ -27,7 +27,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Почистване на гарсониера – 80. 00 лв.
+                            </span>Почистване на гарсониера – 40 €.
 
                         </p>
                         
@@ -52,7 +52,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Почистване на едностаен апартамент ( с едно спално помещение ) – 100. 00 лв.
+                            </span>Почистване на едностаен апартамент ( с едно спално помещение ) – 50. 00 €.
                         </p>
                         <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
                             <span
@@ -61,7 +61,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Почистване на двустаен апартамент ( с две спални помещения ) – 130. 00 лв.
+                            </span>Почистване на двустаен апартамент ( с две спални помещения ) – 65. 00 €.
                         </p>
                         <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
                             <span
@@ -70,7 +70,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Почистване на тристаен апартамент ( с три спални помещения ) – 170. 00 лв.
+                            </span>Почистване на тристаен апартамент ( с три спални помещения ) – 85. 00 €.
                         </p>
                         <p class="flex items-center text-gray-600 mb-6 dark:text-gray-300">
                             <span
