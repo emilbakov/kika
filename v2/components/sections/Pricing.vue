@@ -100,7 +100,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Едноетажни и двуетажни до 120кв/м – от 400. 00 лв.
+                            </span>Едноетажни и двуетажни до 120кв/м – от 200. 00 €.
                         </p>
                         <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
                             <span
@@ -109,7 +109,7 @@
                                     stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                                     <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
-                            </span>Едноетажни и двуетажни до 210кв/ – от 550. 00 лв.
+                            </span>Едноетажни и двуетажни до 210кв/ – от 275. 00 €.
 
                         </p>
                         <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
