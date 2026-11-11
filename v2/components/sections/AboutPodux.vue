@@ -1,42 +1,52 @@
+<script setup lang="ts">
+const amenities = [
+    { name: 'Шампоан', note: 'опаковки 30 мл' },
+    { name: 'Душ гел', note: 'опаковки 30 мл' },
+    { name: 'Сапун за душ и тяло', note: 'опаковки' },
+    { name: 'Сапун за ръце', note: 'опаковка' },
+]
+</script>
+
 <template>
-    <section id="whyus" class="pt-20 md:pt-24">
+    <section id="about" class="py-28 md:py-40">
         <AtomsContainer>
-            <div class="grid md:grid-cols-2 gap-10 xl:gap-14 relative">
-                <div class="flex md:h-full ">
-                    <div
-                        class="container w-full md:h-full rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border">
-                        <img src="public/logo3.png" alt="" width="500"
-                            class="w-full h-full object-contain rounded-2xl">
-                    </div>
+            <div class="grid grid-cols-12 gap-x-6 gap-y-12">
+                <div class="col-span-12 md:col-span-3" data-reveal>
+                    <p class="eyebrow text-gilt">01 — За нас</p>
                 </div>
-                <div class="md:py-2 lg:py-4 relative">
-                    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-                        <span class="flex opacity-20">
-                            <span class="w-16 h-32 rounded-l-full flex bg-primary blur-2xl"></span>
-                            <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl mt-14"></span>
+
+                <div class="col-span-12 md:col-span-9">
+                    <p data-reveal class="font-display font-light text-[clamp(2rem,4.4vw,4rem)] leading-[1.08] tracking-[-0.01em]">
+                        Работим изцяло съобразено с вас и вашето време. Подбираме
+                        <em class="text-gilt">най-добрите био препарати</em> — защото домът ви заслужава
+                        чистотата на планината.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Amenities -->
+            <div class="grid grid-cols-12 gap-x-6 gap-y-10 mt-24 md:mt-36">
+                <div class="col-span-12 md:col-span-5 lg:col-span-4" data-reveal>
+                    <p class="eyebrow text-ink/50">Допълнителна услуга</p>
+                    <h3 class="mt-5 font-display text-4xl md:text-5xl font-light leading-[1.05]">
+                        Банята — <em>заредена</em><br> преди гостите.
+                    </h3>
+                    <p class="mt-6 text-ink/70 font-light leading-relaxed max-w-sm">
+                        За още по-пълно обслужване можем да заредим банята с тоалетни принадлежности,
+                        закупени от нас при предварително заявяване.
+                    </p>
+                </div>
+
+                <ul class="col-span-12 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-6 border-t border-ink/15">
+                    <li v-for="(a, i) in amenities" :key="a.name" data-reveal :style="{ '--d': (i * 90) + 'ms' }"
+                        class="group grid grid-cols-[3rem_1fr_auto] items-baseline py-6 border-b border-ink/15">
+                        <span class="eyebrow text-gilt">{{ String(i + 1).padStart(2, '0') }}</span>
+                        <span class="font-display text-2xl md:text-3xl transition-transform duration-500 group-hover:translate-x-2">
+                            {{ a.name }}
                         </span>
-                    </div>
-                    <div class="relative">
-                        <AtomsTitle texte="Чистотата на природата във вашия дом."  class="indent-8" />
-                        <AtomsTitle texte="Подбираме най – добрите био препарати" class="indent-8 text-green-500" />
-                        <p class="text-gray-600 dark:text-gray-300 pt-8 list-disc indent-8">Работим изцяло съобразено с вас и вашето време </p>
-                        <h2 class="text-gray-600 dark:text-gray-300 pt-8 list-disc indent-8">
-                            За още по-пълно обслужване. Можем да заредим банята с тоалетни принадлежности, закупени от нас при предварително заявяване.
-
-
-                        <li> опаковки шампоан 30мл </li>    
-                        <li>   опаковки душ гел 30мл</li>    
-                        <li>  опаковки сапун за душ/тяло</li>    
-                        <li> опаковка Сапун за ръце </li>    
-                          
-
-                            
-
-                        </h2>
-                       
-                        
-                    </div>
-                </div>
+                        <span class="eyebrow !tracking-[0.2em] text-ink/50">{{ a.note }}</span>
+                    </li>
+                </ul>
             </div>
         </AtomsContainer>
     </section>

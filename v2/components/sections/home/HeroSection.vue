@@ -1,68 +1,93 @@
 <template>
-    <section id="about" class="relative w-full">
-        <div class="absolute top-0 inset-x-0 h-64 flex items-start">
-            <div
-                class="h-24 w-2/3 bg-gradient-to-br from-primary opacity-20 blur-2xl dark:from-[#570cac] dark:invisible dark:opacity-40">
+    <section id="top" class="relative md:min-h-[min(100svh,1000px)] flex flex-col overflow-hidden">
+        <AtomsContainer class-name="relative z-10 flex-1 flex flex-col pt-32 md:pt-40">
+            <!-- meta row -->
+            <div class="flex items-center justify-between gap-6 fade-in" style="--d:.1s">
+                <p class="eyebrow text-gilt">Where Clean Meets the Peak</p>
+                <p class="eyebrow text-ink/50 hidden sm:block">Родопи — България</p>
             </div>
-            <div
-                class="h-20 w-3/5 bg-gradient-to-r from-[#8cd66a] opacity-40 blur-2xl dark:from-[#670ccf] dark:opacity-40">
-            </div>
-        </div>
-        <AtomsContainer class-name="relative">
-            <div aria-hidden="true" class="absolute inset-y-0 w-44 left-0 hidden dark:flex">
-                <div
-                    class="h-full md:h-1/2 lg:h-full w-full bg-gradient-to-tr opacity-40 dark:blur-2xl dark:from-[#570cac] dark:opacity-20">
-                </div>
-            </div>
-            <div
-                class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
-                <div class="lg:py-6">
-                    <div class="text-center lg:text-left">
-                        <span class=" m-5 text-4xl font-black px-2 py-1 rounded-md bg-gray-100 dark:bg-body text-primary ">Where Clean Meets the Peak</span>
-                        <h1 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl indent-8">
-                             <br> Професионално <span
-                                class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#d66a73]">почистване 
-                            </span>
-                            на апартаменти, къщи за гости и вили.
-                        </h1>
-                    </div>
 
-                    <p class= "text-gray-600 dark:text-gray-300 text-xl pt-8 text-center lg:text-left mx-auto max-w-xl indent-8 text-balance">
-                        Ние предлагаме всички необходими услуги за професионално почистване, което включва, както еднократно почистване,така и абонаментно поддържане.
-Услугите ни са гъвкави и съобразени с индивидуалните нужди на клиентите.
+            <div class="grid grid-cols-12 gap-x-6 mt-10 md:mt-14">
+                <h1 class="rise col-span-12 lg:col-span-10 font-display font-light
+                           text-[clamp(3.1rem,12vw,10.5rem)] leading-[0.9] tracking-[-0.025em]">
+                    <span><span>Чистотата</span></span>
+                    <span><span>на <em class="text-gilt font-normal">природата</em></span></span>
+                    <span class="lg:pl-[16vw]"><span>във вашия дом.</span></span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-x-6 gap-y-10 mt-12 md:mt-16 pb-36 md:pb-64">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 fade-in" style="--d:.9s">
+                    <div class="rule mb-6"></div>
+                    <p class="text-lg leading-relaxed text-ink/80 font-light">
+                        Професионално почистване на апартаменти, къщи за гости и вили —
+                        еднократно или с абонаментно поддържане.
                     </p>
-
-                    <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
-                        <AtomsLinkBtn href="/#contact" variant="primary" class="w-full sm:w-max flex justify-center">
-                            Call us
-                        </AtomsLinkBtn>
-
-                        
-                    </div>
-                    <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
-                       
-                    </div>
                 </div>
-                <div class="container lg:h-full  md:flex">
 
-                    <div
-                        class="flex w-full h-96 min-h-[24rem] lg:min-h-[none] lg:w-full lg:h-full items-center relative">
-                        <div
-                            class="absolute z-0 top-1/2  -translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-primary to-pink-300 dark:from-[#570cac] dark:to-primary blur-2xl">
-                        </div>
-                        <div
-                            class="absolute w-3/5 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border">
-                            <img src="/images/hero2.2.png" alt="HERO IMAGE" width="500" height="auto" loading="lazy"
-                                class="w-full h-full rounded-2xl object-fill items-center">
-                        </div>
-                        <div
-                            class="absolute  -translate-y-1/2 top-1/2 h-[calc(80%-2rem)] w-[calc(40%-20px)] p-1 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border ">
-                            <img src="/images/hero2.png" alt="cleaner" width="200" height="auto"
-                                loading="lazy" class="w-full h-full rounded-2xl object-fill">
-                        </div>
-                    </div>
+                <div class="col-span-12 md:col-span-5 md:col-start-8 lg:col-start-9 lg:col-span-4 fade-in flex flex-col gap-5 md:items-end"
+                    style="--d:1.1s">
+                    <a href="#contact"
+                        class="group relative inline-flex items-center justify-between gap-10 w-full md:w-auto
+                               border border-ink/80 px-7 py-5 overflow-hidden">
+                        <span class="absolute inset-0 bg-ink origin-bottom scale-y-0 group-hover:scale-y-100
+                                     transition-transform duration-500 ease-[cubic-bezier(.7,0,.2,1)]"></span>
+                        <span class="relative eyebrow group-hover:text-canvas transition-colors duration-500">
+                            Запазете почистване
+                        </span>
+                        <svg class="relative w-6 h-3 group-hover:text-canvas transition-all duration-500 group-hover:translate-x-1"
+                            viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M0 6h23M18 1l5 5-5 5" />
+                        </svg>
+                    </a>
+                    <a href="#pricing" class="eyebrow draw-link text-ink/60 hover:text-ink pb-1">
+                        Вижте цените
+                    </a>
                 </div>
             </div>
         </AtomsContainer>
+
+        <!-- Ridgelines -->
+        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 pointer-events-none">
+            <svg class="ridge w-full h-auto block" viewBox="0 0 1440 360" preserveAspectRatio="none" fill="none">
+                <path pathLength="1" class="text-ink/25" stroke="currentColor" stroke-width="1"
+                    d="M0 210 L90 186 L160 198 L250 140 L310 162 L405 96 L470 128 L560 70 L640 112 L705 88 L790 134 L880 82 L960 120 L1050 64 L1130 108 L1215 92 L1300 140 L1380 118 L1440 132" />
+                <path pathLength="1" class="text-ink/40" stroke="currentColor" stroke-width="1"
+                    d="M0 262 L120 236 L210 250 L320 196 L400 222 L510 168 L600 210 L690 182 L780 224 L870 172 L980 214 L1080 178 L1170 226 L1290 190 L1380 214 L1440 204" />
+                <path pathLength="1" class="text-gilt" stroke="currentColor" stroke-width="1.2"
+                    d="M0 300 C120 286 180 262 280 268 C380 274 430 240 540 236 C640 232 700 262 800 258 C900 254 960 226 1060 230 C1170 234 1240 266 1340 262 C1390 260 1420 256 1440 254" />
+                <path pathLength="1" class="text-ink/60" stroke="currentColor" stroke-width="1"
+                    d="M0 340 C200 330 330 312 520 318 C700 324 820 300 1000 304 C1160 308 1300 326 1440 318" />
+            </svg>
+            <div class="absolute bottom-6 inset-x-0">
+                <AtomsContainer class-name="flex justify-between eyebrow !text-[0.6rem] text-ink/50 fade-in" style="--d:2.4s">
+                    <span>Пампорово · 1650 m</span>
+                    <span class="hidden sm:inline">Чепеларе · 1150 m</span>
+                    <span>Смолян · 1000 m</span>
+                </AtomsContainer>
+            </div>
+        </div>
     </section>
+
+    <!-- Services marquee -->
+    <div class="border-y border-ink/10 py-6 overflow-hidden" aria-hidden="true">
+        <div class="marquee flex w-max whitespace-nowrap font-display italic font-light text-3xl md:text-4xl text-ink/80">
+            <template v-for="n in 2" :key="n">
+                <span v-for="s in services" :key="s + n" class="flex items-center">
+                    {{ s }}<span class="mx-10 text-gilt text-xl not-italic">✦</span>
+                </span>
+            </template>
+        </div>
+    </div>
 </template>
+
+<script setup lang="ts">
+const services = [
+    'Апартаменти',
+    'Къщи за гости',
+    'Вили',
+    'Абонаментно поддържане',
+    'Био препарати',
+    'Еднократно почистване',
+]
+</script>

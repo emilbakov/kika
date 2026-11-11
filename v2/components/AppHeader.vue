@@ -1,83 +1,83 @@
 <script lang="ts" setup>
-import Logo from "/components/global/Logo.vue";
-
 const navIsOpen = useState('navIsOpen', () => false)
-
-
-function toggleNav(event: MouseEvent): void {
-    event.preventDefault()
-    navIsOpen.value = !navIsOpen.value
-}
+const scrolled = ref(false)
 
 const navLinks = [
-    {
-        text: "За Нас",
-        href: "/#about"
-    },
-    {
-        text: "Защо Нас",
-        href: "/#whyus"
-    },
-    {
-        text: "Обхват",
-        href: "/#covarage"
-    },
-    {
-        text: "Цени",
-        href: "/#pricing"
-    },
-    {
-        text: "Контакт",
-        href: "/#contact"
-    }
+    { text: "За нас", href: "/#about", n: "01" },
+    { text: "Подход", href: "/#whyus", n: "02" },
+    { text: "Обхват", href: "/#covarage", n: "03" },
+    { text: "Цени", href: "/#pricing", n: "04" },
+    { text: "Контакт", href: "/#contact", n: "05" },
 ]
 
+function onScroll() {
+    scrolled.value = window.scrollY > 24
+}
+onMounted(() => {
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+})
+onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
+
+watch(navIsOpen, (open) => {
+    if (import.meta.client) document.body.style.overflow = open ? 'hidden' : ''
+})
 </script>
+
 <template>
-    <header class="absolute inset-x-0 top-0 py-3 z-50">
-        <AtomsContainer class-name="relative">
-            <nav class="flex items-center justify-between w-full relative">
-                <!-- app logo -->
-                <div class="inline-flex relative bg-inherit">
-                    <NuxtLink to="/" class=" flex items-center gap-2">
-                        <Logo />
-                        <span class="text-xl font-black text-gray-700 dark:text-white capitalize">RHODOPE Clean</span>
-                    </NuxtLink>
-                </div>
-                <div 
-                    class="absolute top-full px-5 sm:px-8 md:px-12 lg:px-0 
-                    lg:pt-0 lg:top-0 invisible opacity-40 lg:opacity-100 bg-body rounded-xl border border-box-border shadow-lg shadow-box-shadow 
-                    lg:border-none lg:shadow-none lg:rounded-none
-                    lg:bg-transparent w-full lg:w-max py-6 lg:py-0 lg:visible lg:relative flex 
-                    transition-all duration-300 ease-linear origin-top translate-y-6 lg:translate-y-0"
-                    :class="navIsOpen?'!visible !opacity-100 !translate-y-0':''">
-                    <ul class="text-gray-700 dark:text-gray-100 w-full flex lg:items-center gap-y-4 lg:gap-x-8 flex-col lg:flex-row">
-                        <AtomsNavLink v-for="navItem in navLinks" :href="navItem.href" :text="navItem.text" />
-                    </ul>
-                </div>
+    <header class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+        :class="scrolled && !navIsOpen ? 'bg-canvas/85 backdrop-blur-md py-3' : 'py-6'">
+        <AtomsContainer>
+            <nav class="flex items-center justify-between gap-6 relative z-10">
+                <Wordmark @click="navIsOpen = false" />
 
-                <div class="flex items-center bg-inherit gap-1 lg:gap-3 min-w-max">
+                <ul class="hidden lg:flex items-center gap-10">
+                    <li v-for="item in navLinks" :key="item.href">
+                        <NuxtLink :to="item.href" class="eyebrow draw-link pb-1 text-ink/75 hover:text-ink transition">
+                            {{ item.text }}
+                        </NuxtLink>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-3 sm:gap-5">
+                    <a href="tel:+359896011439"
+                        class="hidden md:inline-flex eyebrow text-ink/75 hover:text-gilt transition">
+                        +359 89 601 1439
+                    </a>
+                    <span class="hidden md:block w-px h-4 bg-ink/20"></span>
                     <ElementsThemeSwitcher />
-                    
-                    <div class="flex lg:hidden items-center">
-                       
-                    </div>
-
-                    <div class="flex lg:hidden border-l border-box-border pl-2">
-                        <button @click="toggleNav" class="outline-none w-7 h-auto flex flex-col relative">
-                            <span
-                                class="w-6 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200 transition-all duration-300 ease-linear"
-                                :class="navIsOpen ? 'translate-y-1.5 rotate-[40deg] scale-x-100 ' : ' scale-x-50 origin-left'"></span>
-                            <span
-                                class="w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200 transition-all duration-300 ease-linear"
-                                :class="navIsOpen ? 'scale-x-0 opacity-0' : ''"></span>
-                            <span
-                                class="w-6 mt-1 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200 transition-all duration-300 ease-linear"
-                                :class="navIsOpen ? '-translate-y-1.5 -rotate-[40deg] scale-x-100 ' : ' scale-x-75 origin-left'"></span>
-                        </button>
-                    </div>
+                    <button @click="navIsOpen = !navIsOpen" type="button"
+                        class="lg:hidden w-9 h-9 flex flex-col items-end justify-center gap-[6px]"
+                        :aria-expanded="navIsOpen" aria-label="Меню">
+                        <span class="block h-px bg-ink transition-all duration-500"
+                            :class="navIsOpen ? 'w-6 translate-y-[3.5px] rotate-45' : 'w-6'"></span>
+                        <span class="block h-px bg-ink transition-all duration-500"
+                            :class="navIsOpen ? 'w-6 -translate-y-[3.5px] -rotate-45' : 'w-4'"></span>
+                    </button>
                 </div>
             </nav>
         </AtomsContainer>
+
+        <!-- Mobile: full-screen menu -->
+        <div class="lg:hidden fixed inset-0 bg-canvas transition-[clip-path] duration-700 ease-[cubic-bezier(.7,0,.2,1)]"
+            :style="{ clipPath: navIsOpen ? 'inset(0 0 0 0)' : 'inset(0 0 100% 0)' }">
+            <AtomsContainer class-name="h-full flex flex-col justify-end pb-12 pt-28">
+                <ul class="space-y-1">
+                    <li v-for="(item, i) in navLinks" :key="item.href"
+                        class="border-t border-ink/10 last:border-b transition-all duration-700"
+                        :class="navIsOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                        :style="{ transitionDelay: navIsOpen ? `${200 + i * 70}ms` : '0ms' }">
+                        <NuxtLink :to="item.href" @click="navIsOpen = false"
+                            class="flex items-baseline justify-between py-4">
+                            <span class="font-display text-5xl font-light">{{ item.text }}</span>
+                            <span class="eyebrow text-gilt">{{ item.n }}</span>
+                        </NuxtLink>
+                    </li>
+                </ul>
+                <a href="tel:+359896011439" class="mt-10 font-display italic text-2xl text-gilt">
+                    +359 89 601 1439
+                </a>
+            </AtomsContainer>
+        </div>
     </header>
 </template>

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 useHead({
-  title: 'RHODOPE Clean',
+  title: 'Rhodope Clean — Професионално почистване в Родопите',
   meta: [
-    { name: 'description', content: 'Професионално почистване на апартаменти, къщи за гости и вили.' },
+    { name: 'description', content: 'Професионално почистване на апартаменти, къщи за гости и вили в Пампорово, Чепеларе и Смолян.' },
+    { name: 'theme-color', content: '#f1ece2' },
   ],
   link: [
     { rel: 'icon', type: 'image/png', href: '/logo3.png' }
@@ -12,10 +13,9 @@ useHead({
 <template>
     <div>
         <SectionsHomeHeroSection/>
-        <!-- <SectionsHomeLatestPodcast/>
-        <SectionsHomePopularPodcasts/> -->
         <SectionsAboutPodux/>
         <SectionsWhyUs/>
+        <SectionsCoverage/>
         <SectionsPricing/>
         <SectionsCallToAction/>
     </div>

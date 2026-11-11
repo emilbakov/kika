@@ -1,33 +1,50 @@
+<script setup lang="ts">
+const principles = [
+    {
+        n: 'I',
+        title: 'Био препарати',
+        text: 'Подбираме внимателно препарати, щадящи дома, хората в него и природата около него.',
+    },
+    {
+        n: 'II',
+        title: 'Във вашето време',
+        text: 'Графикът се съобразява с вас — между гости, преди сезона или когато ви е удобно.',
+    },
+    {
+        n: 'III',
+        title: 'Еднократно или абонамент',
+        text: 'Гъвкави услуги според индивидуалните нужди — от едно посещение до постоянна грижа.',
+    },
+]
+</script>
+
 <template>
-    <section id="covarage" class="pt-20 md:pt-24">
-        <AtomsContainer>
-            <div class="grid md:grid-cols-2 gap-10 xl:gap-14 relative">
-                <div class="md:py-2 lg:py-4 relative">
-                    <div class="absolute left-0 top-0 h-full w-full flex justify-end">
-                        <span class="flex opacity-20">
-                            <span class="w-16 h-32 rounded-l-full flex bg-primary blur-2xl"></span>
-                            <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl mt-14"></span>
-                        </span>
-                    </div>
-                    <div class="relative">
-                        <AtomsTitle texte="Покритие" class=""/>
-                        <h1 class="text-gray-600 dark:text-gray-300 pt-8 text-4xl font-black">
-                           Пампорово - Чепеларе - Смолян 
-                        </h1>
-                        
-                      
-                    </div>
-                </div>
-                <div class="flex md:h-full relative">
-                    <div
-                            class="absolute z-0 top-1/2  -translate-y-1/2 w-5/6 right-10 h-[calc(80%+20px)] bg-black dark:to-primary blur-2xl">
-                        </div>
-                    <div
-                        class="w-full h-[27rem] sm:h-[30rem] md:h-full flex justify-start md:justify-end relative pb-5">
-                        <img src="/images/map.png" alt="Illustratuin about" width="500"
-                            class="w-11/12 lg:w-5/6 h-full object-contain ">
-                    </div>
-                </div>
+    <section id="whyus" class="bg-ink text-canvas dark:bg-[#1a211d] dark:text-ink py-28 md:py-40 relative overflow-hidden">
+        <!-- contour texture -->
+        <svg aria-hidden="true" class="absolute -right-40 -top-20 w-[900px] max-w-none opacity-[0.08] text-canvas dark:text-ink"
+            viewBox="0 0 600 600" fill="none" stroke="currentColor" stroke-width="0.8">
+            <path v-for="i in 12" :key="i"
+                :d="`M${300 - i * 22} 300 C${300 - i * 22} ${200 - i * 14}, ${360 + i * 8} ${180 - i * 18}, ${300 + i * 24} ${280 - i * 6} S ${290 + i * 10} ${400 + i * 20}, ${300 - i * 22} 300`" />
+        </svg>
+
+        <AtomsContainer class-name="relative">
+            <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+                <p class="col-span-12 md:col-span-3 eyebrow text-gilt" data-reveal>02 — Подход</p>
+                <h2 class="col-span-12 md:col-span-9 font-display font-light text-[clamp(2.6rem,6vw,6rem)] leading-[0.95] tracking-[-0.02em]"
+                    data-reveal>
+                    Тиха прецизност.<br>
+                    <em class="text-gilt">Без компромис.</em>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 mt-20 md:mt-28 border-t border-canvas/15 dark:border-ink/15">
+                <article v-for="(p, i) in principles" :key="p.n" data-reveal :style="{ '--d': (i * 120) + 'ms' }"
+                    class="pt-10 pb-6 md:pr-10 md:[&:not(:first-child)]:pl-10 md:[&:not(:last-child)]:border-r border-canvas/15 dark:border-ink/15
+                           border-b md:border-b-0 last:border-b-0">
+                    <span class="font-display italic text-gilt text-2xl">{{ p.n }}.</span>
+                    <h3 class="mt-8 font-display text-3xl md:text-[2.1rem] leading-tight">{{ p.title }}</h3>
+                    <p class="mt-5 text-canvas/65 dark:text-ink/65 font-light leading-relaxed">{{ p.text }}</p>
+                </article>
             </div>
         </AtomsContainer>
     </section>

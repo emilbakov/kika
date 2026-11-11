@@ -1,151 +1,95 @@
+<script setup lang="ts">
+type Item = { name: string, detail?: string, price: string, from?: boolean }
+const groups: { title: string, roman: string, items: Item[] }[] = [
+    {
+        title: 'Студия',
+        roman: 'I',
+        items: [
+            { name: 'Студио', price: '30' },
+            { name: 'Гарсониера', price: '40' },
+        ],
+    },
+    {
+        title: 'Апартаменти',
+        roman: 'II',
+        items: [
+            { name: 'Едностаен', detail: 'с едно спално помещение', price: '50' },
+            { name: 'Двустаен', detail: 'с две спални помещения', price: '65' },
+            { name: 'Тристаен', detail: 'с три спални помещения', price: '85' },
+            { name: 'Многостаен и мезонет', price: 'по запитване' },
+        ],
+    },
+    {
+        title: 'Къщи и вили',
+        roman: 'III',
+        items: [
+            { name: 'До 120 м²', detail: 'едноетажни и двуетажни', price: '200', from: true },
+            { name: 'До 210 м²', detail: 'едноетажни и двуетажни', price: '275', from: true },
+            { name: 'Над 210 м²', price: 'по запитване' },
+        ],
+    },
+]
+</script>
+
 <template>
-    <section id="pricing" class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900 dark:text-gray-300">Цени</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500 dark:text-gray-300"> Свържете се с нас за индивидуална оферта!</p>
-                
+    <section id="pricing" class="py-28 md:py-40 border-t border-ink/10">
+        <AtomsContainer>
+            <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+                <p class="col-span-12 md:col-span-3 eyebrow text-gilt" data-reveal>04 — Цени</p>
+                <div class="col-span-12 md:col-span-9">
+                    <h2 class="font-display font-light text-[clamp(2.6rem,6vw,6rem)] leading-[0.95] tracking-[-0.02em]" data-reveal>
+                        Ясни цени.<br><em class="text-gilt">Без изненади.</em>
+                    </h2>
+                    <p class="mt-8 text-ink/60 font-light max-w-md" data-reveal :style="{ '--d': (120) + 'ms' }">
+                        Свържете се с нас за индивидуална оферта. Всички цени са в евро.
+                    </p>
+                </div>
             </div>
-            <div class="flex flex-wrap -m-4">
-                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-                    <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-                        <h2 class="text-sm tracking-widest title-font mb-1 font-medium dark:text-gray-300">START</h2>
-                        <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none"></h1>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на студио – 30 €.
-                        </p>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на гарсониера – 40 €.
 
-                        </p>
-                        
-                       
-                    </div>
-                </div>
-                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-                    <div
-                        class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
-                        <span
-                            class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl dark:text-gray-300">POPULAR</span>
-                        <h2 class="text-sm tracking-widest title-font mb-1 font-medium dark:text-gray-300">PRO</h2>
-                        <h1
-                            class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-                            <!-- <span>$38</span> -->
-                            <span class="text-lg ml-1 font-normal text-gray-500 dark:text-gray-300">Почистване на апартаменти</span>
-                        </h1>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на едностаен апартамент ( с едно спално помещение ) – 50. 00 €.
-                        </p>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на двустаен апартамент ( с две спални помещения ) – 65. 00 €.
-                        </p>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0  dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на тристаен апартамент ( с три спални помещения ) – 85. 00 €.
-                        </p>
-                        <p class="flex items-center text-gray-600 mb-6 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300 dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на многостаен апартамент и мезонет – Обадете се за оферта
+            <div class="grid grid-cols-12 gap-x-6 mt-20 md:mt-28">
+                <div class="col-span-12 lg:col-span-9 lg:col-start-4 space-y-20 md:space-y-24">
+                    <div v-for="g in groups" :key="g.title" data-reveal>
+                        <div class="flex items-baseline gap-5 pb-5 border-b border-ink">
+                            <span class="font-display italic text-gilt text-xl w-8">{{ g.roman }}.</span>
+                            <h3 class="font-display text-3xl md:text-4xl">{{ g.title }}</h3>
+                        </div>
 
-                        </p>
-                        
+                        <ul>
+                            <li v-for="item in g.items" :key="item.name"
+                                class="group flex items-end py-5 md:py-6 border-b border-ink/10">
+                                <span class="w-8 hidden sm:block"></span>
+                                <span class="sm:pl-5 min-w-0">
+                                    <span class="block font-display text-2xl md:text-[1.7rem] leading-tight transition-colors group-hover:text-gilt">
+                                        {{ item.name }}
+                                    </span>
+                                    <span v-if="item.detail" class="block mt-1 text-sm text-ink/50 font-light">
+                                        {{ item.detail }}
+                                    </span>
+                                </span>
+                                <span class="leader hidden sm:block"></span>
+                                <span class="ml-auto sm:ml-0 pl-4 shrink-0 text-right">
+                                    <template v-if="item.price === 'по запитване'">
+                                        <span class="font-display italic text-xl md:text-2xl text-ink/70">по запитване</span>
+                                    </template>
+                                    <template v-else>
+                                        <span v-if="item.from" class="eyebrow !text-[0.6rem] text-ink/50 mr-2">от</span>
+                                        <span class="font-display text-3xl md:text-4xl tabular-nums">{{ item.price }}</span>
+                                        <span class="font-display text-xl md:text-2xl text-gilt ml-1">€</span>
+                                    </template>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-                    <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden dark:text-gray-300">
-                        <h2 class="text-sm tracking-widest title-font mb-1 font-medium">BUSINESS</h2>
-                        <h1
-                            class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-                            
-                            <span class="text-lg ml-1 font-normal text-gray-500 dark:text-gray-300">Почистване на къщи и вили</span>
-                        </h1>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Едноетажни и двуетажни до 120кв/м – от 200. 00 €.
-                        </p>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Едноетажни и двуетажни до 210кв/ – от 275. 00 €.
 
+                    <div data-reveal class="relative border border-ink/20 p-8 md:p-12 grid md:grid-cols-[auto_1fr] gap-6 md:gap-12 items-start">
+                        <span class="eyebrow text-gilt pt-2">Специални случаи</span>
+                        <p class="font-display text-2xl md:text-3xl font-light leading-snug">
+                            За жилища <em>след ремонт</em> или празни, без мебели, горепосочените цени
+                            не са актуални — <a href="#contact" class="draw-link text-gilt">обадете се за оферта</a>.
                         </p>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>Почистване на къщи и вили над 210кв/м – Обадете се за оферта
-                        </p>
-                        
-                        
-                        
-                    </div>
-                </div>
-                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-                    <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden dark:text-gray-300">
-                        <h2 class="text-sm tracking-widest title-font mb-1 font-medium">SPECIAL</h2>
-                        <h1
-                            class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-                            
-                        </h1>
-                        <p class="flex items-center text-gray-600 mb-2 dark:text-gray-300">
-                            <span
-                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 dark:text-gray-300">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5"></path>
-                                </svg>
-                            </span>За жилища след ремонт или празни без мебели горепосочените цени не са актуални – Обадете се за оферта.
-                        </p>
-                       
                     </div>
                 </div>
             </div>
-        </div>
+        </AtomsContainer>
     </section>
 </template>

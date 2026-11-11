@@ -1,48 +1,37 @@
 <template>
-    <section id="contact" class="py-20">
+    <section id="contact" class="relative py-28 md:py-44 overflow-hidden border-t border-ink/10">
         <AtomsContainer>
-            <div
-                class="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-body-color">
-                <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-                    
-                    <span class="flex opacity-20">
-                        <span class="w-16 h-32 rounded-l-full flex bg-primary blur-2xl"></span>
-                        <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl mt-14"></span>
-                    </span>
-                </div>
+            <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+                <p class="col-span-12 md:col-span-3 eyebrow text-gilt" data-reveal>05 — Контакт</p>
+                <p class="col-span-12 md:col-span-6 text-ink/60 font-light text-lg" data-reveal :style="{ '--d': (100) + 'ms' }">
+                    Свържете се с нас лесно и бързо. Ще отговорим лично
+                    и ще подготвим оферта, съобразена с вашия дом.
+                </p>
+            </div>
 
-                <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
-                    <span class="flex opacity-20">
-                        <span class="w-16 h-32 rounded-l-full flex bg-primary blur-2xl"></span>
-                        <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl mt-14"></span>
-                    </span>
-                </div>
-                <div class="mx-auto text-center max-w-xl md:max-w-2xl relative">
-                    <div class="text-primary mx-auto flex justify-center items-center">
-                        <Telephone />
-                    </div>
-                    
-                    
-                    <h2 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6x">
-                        
-                        Телефон <span
-                            class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"> +359896011439</span>
-                        
-                    </h2>
-                    <h2 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6x">
-                        
-                        Email <span
-                            class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]"> @</span>
-                        
-                    </h2>
-                    
-                    <p class="text-gray-600 dark:text-gray-300 pt-8 mx-auto max-w-xl">
-                        <span></span>
-                        
-                        Свържете се с нас лесно и бързо – по имейл или телефон.
+            <div class="mt-16 md:mt-24 text-center" data-reveal>
+                <p class="eyebrow text-ink/50">Обадете се</p>
+                <a href="tel:+359896011439"
+                    class="group inline-block mt-6 font-display font-light leading-[0.9] tracking-[-0.03em]
+                           text-[clamp(2.7rem,10vw,10rem)] whitespace-nowrap">
+                    <span class="text-ink/40 transition-colors duration-500 group-hover:text-gilt">+359</span>
+                    <em class="transition-colors duration-500 group-hover:text-gilt">89 601 1439</em>
+                </a>
+                <div class="mx-auto mt-10 h-px w-24 bg-gilt"></div>
+            </div>
 
-                    </p>
-                    
+            <div class="mt-20 md:mt-28 grid sm:grid-cols-3 border-t border-ink/15" data-reveal>
+                <div class="py-8 sm:pr-8 border-b sm:border-b-0 sm:border-r border-ink/15">
+                    <p class="eyebrow text-ink/50">Телефон</p>
+                    <a href="tel:+359896011439" class="mt-3 block font-display text-2xl draw-link w-max">+359 89 601 1439</a>
+                </div>
+                <div class="py-8 sm:px-8 border-b sm:border-b-0 sm:border-r border-ink/15">
+                    <p class="eyebrow text-ink/50">Райони</p>
+                    <p class="mt-3 font-display text-2xl">Пампорово · Чепеларе · Смолян</p>
+                </div>
+                <div class="py-8 sm:pl-8">
+                    <p class="eyebrow text-ink/50">Услуги</p>
+                    <p class="mt-3 font-display text-2xl">Еднократно <em class="text-gilt">&amp;</em> абонаментно</p>
                 </div>
             </div>
         </AtomsContainer>

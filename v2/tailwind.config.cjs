@@ -16,14 +16,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        canvas: "rgb(var(--c-canvas) / <alpha-value>)",
+        ink: "rgb(var(--c-ink) / <alpha-value>)",
+        gilt: "rgb(var(--c-gilt) / <alpha-value>)",
+        moss: "rgb(var(--c-moss) / <alpha-value>)",
+
+        // legacy
         body: "rgb(var(--color-bg))",
         "box-bg": "rgb(var(--color-box))",
         "box-shadow": "rgb(var(--box-sd))",
         "box-border": "rgb(var(--box-border))",
-        primary: "#00D8A5",
-        secondary: "#7E43AD",
-        "body-color": "#462C64",
-        "gray-color": "",
+        primary: "rgb(var(--c-gilt) / <alpha-value>)",
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
+        label: ['"Tenor Sans"', "ui-sans-serif", "sans-serif"],
+        body: ['"Onest"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       zIndex: {
         60: "60",
