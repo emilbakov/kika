@@ -8,21 +8,21 @@
             </div>
 
             <div class="grid grid-cols-12 gap-x-6 mt-10 md:mt-14">
-                <h1 class="rise col-span-12 lg:col-span-10 font-display font-light
+                <p class="rise col-span-12 lg:col-span-10 font-display font-light
                            text-[clamp(3.1rem,12vw,10.5rem)] leading-[0.9] tracking-[-0.025em]">
                     <span><span>Чистотата</span></span>
                     <span><span>на <em class="text-gilt font-normal">природата</em></span></span>
                     <span class="lg:pl-[16vw]"><span>във вашия дом.</span></span>
-                </h1>
+                </p>
             </div>
 
             <div class="grid grid-cols-12 gap-x-6 gap-y-10 mt-12 md:mt-16 pb-36 md:pb-64">
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 fade-in" style="--d:.9s">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4">
                     <div class="rule mb-6"></div>
-                    <p class="text-lg leading-relaxed text-ink/80 font-light">
-                        Професионално почистване на апартаменти, къщи за гости и вили —
-                        еднократно или с абонаментно поддържане.
-                    </p>
+                    <h1 class="text-lg leading-relaxed text-ink/80 font-light">
+                        Професионално почистване на апартаменти, къщи за гости и вили
+                        в Пампорово, Чепеларе и Смолян — еднократно или с абонаментно поддържане.
+                    </h1>
                 </div>
 
                 <div class="col-span-12 md:col-span-5 md:col-start-8 lg:col-start-9 lg:col-span-4 fade-in flex flex-col gap-5 md:items-end"

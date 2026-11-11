@@ -16,11 +16,11 @@ const amenities = [
                 </div>
 
                 <div class="col-span-12 md:col-span-9">
-                    <p data-reveal class="font-display font-light text-[clamp(2rem,4.4vw,4rem)] leading-[1.08] tracking-[-0.01em]">
+                    <h2 data-reveal class="font-display font-light text-[clamp(2rem,4.4vw,4rem)] leading-[1.08] tracking-[-0.01em]">
                         Работим изцяло съобразено с вас и вашето време. Подбираме
                         <em class="text-gilt">най-добрите био препарати</em> — защото домът ви заслужава
                         чистотата на планината.
-                    </p>
+                    </h2>
                 </div>
             </div>
 

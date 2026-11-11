@@ -1,34 +1,5 @@
 <script setup lang="ts">
-type Item = { name: string, detail?: string, price: string, from?: boolean }
-const groups: { title: string, roman: string, items: Item[] }[] = [
-    {
-        title: 'Студия',
-        roman: 'I',
-        items: [
-            { name: 'Студио', price: '30' },
-            { name: 'Гарсониера', price: '40' },
-        ],
-    },
-    {
-        title: 'Апартаменти',
-        roman: 'II',
-        items: [
-            { name: 'Едностаен', detail: 'с едно спално помещение', price: '50' },
-            { name: 'Двустаен', detail: 'с две спални помещения', price: '65' },
-            { name: 'Тристаен', detail: 'с три спални помещения', price: '85' },
-            { name: 'Многостаен и мезонет', price: 'по запитване' },
-        ],
-    },
-    {
-        title: 'Къщи и вили',
-        roman: 'III',
-        items: [
-            { name: 'До 120 м²', detail: 'едноетажни и двуетажни', price: '200', from: true },
-            { name: 'До 210 м²', detail: 'едноетажни и двуетажни', price: '275', from: true },
-            { name: 'Над 210 м²', price: 'по запитване' },
-        ],
-    },
-]
+const groups = PRICING
 </script>
 
 <template>
@@ -51,7 +22,7 @@ const groups: { title: string, roman: string, items: Item[] }[] = [
                     <div v-for="g in groups" :key="g.title" data-reveal>
                         <div class="flex items-baseline gap-5 pb-5 border-b border-ink">
                             <span class="font-display italic text-gilt text-xl w-8">{{ g.roman }}.</span>
-                            <h3 class="font-display text-3xl md:text-4xl">{{ g.title }}</h3>
+                            <h3 class="font-display text-3xl md:text-4xl">{{ g.title }}<span class="sr-only"> — цени за почистване</span></h3>
                         </div>
 
                         <ul>
@@ -68,7 +39,7 @@ const groups: { title: string, roman: string, items: Item[] }[] = [
                                 </span>
                                 <span class="leader hidden sm:block"></span>
                                 <span class="ml-auto sm:ml-0 pl-4 shrink-0 text-right">
-                                    <template v-if="item.price === 'по запитване'">
+                                    <template v-if="item.price == null">
                                         <span class="font-display italic text-xl md:text-2xl text-ink/70">по запитване</span>
                                     </template>
                                     <template v-else>

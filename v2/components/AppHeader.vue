@@ -28,7 +28,7 @@ watch(navIsOpen, (open) => {
     <header class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
         :class="scrolled && !navIsOpen ? 'bg-canvas/85 backdrop-blur-md py-3' : 'py-6'">
         <AtomsContainer>
-            <nav class="flex items-center justify-between gap-6 relative z-10">
+            <nav aria-label="Основна навигация" class="flex items-center justify-between gap-6 relative z-10">
                 <Wordmark @click="navIsOpen = false" />
 
                 <ul class="hidden lg:flex items-center gap-10">

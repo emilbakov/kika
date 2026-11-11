@@ -9,10 +9,27 @@ export default defineNuxtConfig({
       '~/assets/css/app.css'
   ],
 
+  runtimeConfig: {
+      public: {
+          // Production origin, e.g. https://example.bg — set via NUXT_PUBLIC_SITE_URL
+          siteUrl: '',
+      },
+  },
+
   app: {
       head: {
           htmlAttrs: { lang: 'bg' },
+          meta: [
+              { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+              { name: 'format-detection', content: 'telephone=yes' },
+              { name: 'theme-color', content: '#f1ece2', media: '(prefers-color-scheme: light)' },
+              { name: 'theme-color', content: '#0d110f', media: '(prefers-color-scheme: dark)' },
+          ],
           link: [
+              { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+              { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+              { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+              { rel: 'manifest', href: '/site.webmanifest' },
               { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
               { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
               {

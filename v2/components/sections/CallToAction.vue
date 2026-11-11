@@ -10,7 +10,7 @@
             </div>
 
             <div class="mt-16 md:mt-24 text-center" data-reveal>
-                <p class="eyebrow text-ink/50">Обадете се</p>
+                <h2 class="eyebrow text-ink/50">Обадете се за оферта</h2>
                 <a href="tel:+359896011439"
                     class="group inline-block mt-6 font-display font-light leading-[0.9] tracking-[-0.03em]
                            text-[clamp(2.7rem,10vw,10rem)] whitespace-nowrap">
